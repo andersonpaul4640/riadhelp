@@ -1,8 +1,8 @@
 
 document.getElementById("sendButton").addEventListener("click", async function () {
   const htmlCode = document.getElementById("htmlCode").value;
-  const botToken = "7855600590:AAGi4sMg1QVwJcOITO4QnVABQAOcHPiHRJo"; // Replace with your Bot Token
-  const chatId = "@riadhelp"; // Replace with your Channel Username or Chat ID
+  const botToken = "7900918160:AAFOUuw42n_hOQCJAfaiWrKjOlQBjph1JBc"; // Replace with your Bot Token
+  const chatId = "@freenettipsinfo"; // Replace with your Channel Username or Chat ID
 
   if (!htmlCode.trim()) {
     document.getElementById("status").textContent = "Please enter some HTML code.";
