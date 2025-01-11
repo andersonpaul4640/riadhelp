@@ -1,8 +1,8 @@
 
 document.getElementById("sendButton").addEventListener("click", async function () {
   const htmlCode = document.getElementById("htmlCode").value;
-  const botToken = "YOUR_BOT_TOKEN"; // Replace with your Bot Token
-  const chatId = "@YOUR_CHANNEL_USERNAME"; // Replace with your Channel Username or Chat ID
+  const botToken = "7855600590:AAGi4sMg1QVwJcOITO4QnVABQAOcHPiHRJo"; // Replace with your Bot Token
+  const chatId = "@riadhelp"; // Replace with your Channel Username or Chat ID
 
   if (!htmlCode.trim()) {
     document.getElementById("status").textContent = "Please enter some HTML code.";
