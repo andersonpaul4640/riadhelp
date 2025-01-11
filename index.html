@@ -1,19 +1,20 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Telegram Bot</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Bot Integration</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Telegram Channel Bot</h1>
-    <textarea id="htmlCode" placeholder="Write HTML Code Here"></textarea>
-    <button id="sendButton">Send to Telegram</button>
-    <p id="status"></p>
-  </div>
-  <script src="script.js"></script>
+    <div class="container">
+        <h1>Send Message to Telegram Channel</h1>
+        <form id="telegramForm">
+            <textarea id="message" placeholder="Write your message here..." required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <p id="response"></p>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
