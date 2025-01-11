@@ -1,6 +1,6 @@
 // Replace with your Bot API Token and Chat ID
-const BOT_TOKEN = "7900918160:AAFOUuw42n_hOQCJAfaiWrKjOlQBjph1JBc";
-const CHAT_ID = "-1002298597878";
+const BOT_TOKEN = "7900918160:AAFOUuw42n_hOQCJAfaiWrKjOlQBjph1JBc";  // Your Bot API Token
+const CHAT_ID = "-1002298597878";  // Your Channel Chat ID
 
 // Form submission handling
 document.getElementById("telegramForm").addEventListener("submit", function (e) {
@@ -12,7 +12,6 @@ document.getElementById("telegramForm").addEventListener("submit", function (e) 
     // API URL
     const apiURL = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
 
-    // Fetch API to send message
     fetch(apiURL, {
         method: "POST",
         headers: {
@@ -41,3 +40,38 @@ document.getElementById("telegramForm").addEventListener("submit", function (e) 
     // Clear the message field
     document.getElementById("message").value = "";
 });
+
+// Function to update iframe content with auto-refresh
+const updateIframe = () => {
+    const iframe = document.getElementById("iframe");
+    const codeContent = `
+        <html>
+            <head>
+                <style>
+                    body { font-family: Arial, sans-serif; }
+                    pre { background-color: #f4f4f4; padding: 15px; border: 1px solid #ddd; }
+                </style>
+            </head>
+            <body>
+                <h2>Code Preview:</h2>
+                <pre>
+                    <code>
+                        &lt;html&gt;
+                            &lt;head&gt;
+                                &lt;style&gt;
+                                    body { font-family: Arial, sans-serif; }
+                                &lt;/style&gt;
+                            &lt;/head&gt;
+                            &lt;body&gt;
+                                &lt;h2&gt;Code Display&lt;/h2&gt;
+                            &lt;/body&gt;
+                        &lt;/html&gt;
+                    </code>
+                </pre>
+            </body>
+        </html>`;
+    iframe.srcdoc = codeContent;
+}
+
+// Auto-refresh the iframe every 5 seconds
+setInterval(updateIframe, 5000);
